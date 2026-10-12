@@ -36,4 +36,4 @@ function tC(){if(!stream) return;let t=stream.getVideoTracks()[0];t.enabled=!t.e
 function takeSS(){try{let c=document.createElement('canvas');let v1=document.getElementById('rv').style.display!=='none'?document.getElementById('rv'):null;let v2=document.getElementById('mv');c.width=640;c.height=960;let ctx=c.getContext('2d');ctx.fillStyle='#000';ctx.fillRect(0,0,640,960);if(v1 && v1.videoWidth){ctx.drawImage(v1,0,0,640,480);}if(v2 && v2.videoWidth){ctx.save();ctx.scale(-1,1);ctx.drawImage(v2,-640,480,640,480);ctx.restore();}let a=document.createElement('a');a.download='telugu-vc-'+Date.now()+'.png';a.href=c.toDataURL();a.click();alert('📸 Screenshot saved!');}catch(e){alert('Screenshot failed: '+e.message)}}
 function sT(){sec=0;eT();ti=setInterval(()=>{sec++;let m=String(Math.floor(sec/60)).padStart(2,'0');let s=String(sec%60).padStart(2,'0');document.getElementById('tm').innerText='00:'+m+':'+s},1000)}
 function eT(){if(ti)clearInterval(ti);document.getElementById('tm').innerText='00:00:00'}
-</script></body></html>
+</script></body></html>     
